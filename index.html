@@ -403,12 +403,17 @@ body {
 /* ====== CONTENEDOR ====== */
 .contenedor {
   background: white;
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 30px;
+  width: 95%;
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 15px;
   border-radius: 14px;
 }
-
+.tabla-wrapper,
+.tabla-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
 /* ====== MENÚ ====== */
 .menu-grid {
   display: grid;
@@ -968,9 +973,51 @@ pitcher-box td {
 .tablaPitchers tr:nth-child(even) {
   background: #f2f6ff;
 }
-
+.tabla-jugadores,
+.stats-table,
+.scoreboard {
+  min-width: 800px;
+}
+.login-box {
+  width: 90%;
+  max-width: 360px;
+}
 .tablaPitchers tr:hover {
   background: #dbe6ff;
+  @media (max-width: 768px) {
+
+  body {
+    padding: 10px;
+  }
+
+  h1, h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-grid button {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .nuevo-juego input,
+  .nuevo-jugador input,
+  .nuevo-jugador select {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .nuevo-juego button,
+  .nuevo-jugador button {
+    width: 100%;
+  }
+
+}
+  
 }</style>
 
     <script>console.log("Softbol Control cargado");
