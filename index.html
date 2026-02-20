@@ -356,20 +356,20 @@
       <button onclick="mostrar('menu')">⬅ Volver al menú</button>
     </section>
     <style>/* ====== GENERAL ====== */
+/* ===== BASE ===== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #0b1fa8;
+  background: #ffffff;
 }
 
-/* UTILIDAD */
 .hidden {
   display: none;
 }
 
-/* ====== LOGIN ====== */
+/* ===== LOGIN ===== */
 .login-box {
-  background: white;
+  background: rgb(87, 72, 249);
   width: 360px;
   margin: 80px auto;
   padding: 30px;
@@ -381,7 +381,6 @@ body {
   width: 95%;
   padding: 10px;
   margin: 8px 0;
-  font-size: 14px;
 }
 
 .login-box button {
@@ -392,532 +391,106 @@ body {
   color: white;
   border: none;
   cursor: pointer;
-  font-size: 15px;
 }
 
 .error {
   color: red;
-  margin-top: 10px;
 }
 
-/* ====== CONTENEDOR ====== */
+/* ===== CONTENEDOR ===== */
 .contenedor {
   background: white;
-  width: 95%;
-  max-width: 100%;
-  margin: 20px auto;
-  padding: 15px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
   border-radius: 14px;
 }
-.tabla-wrapper,
-.tabla-scroll {
-  width: 100%;
-  overflow-x: auto;
-}
-/* ====== MENÚ ====== */
+
+/* ===== MENU ===== */
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 15px;
-  margin-top: 20px;
 }
 
 .menu-grid button {
   padding: 16px;
-  font-size: 16px;
   cursor: pointer;
 }
 
-/* ====== JUEGOS ====== */
-.nuevo-juego input {
-  padding: 8px;
-  margin-right: 6px;
-}
-
-.nuevo-juego button {
-  padding: 8px 16px;
-}
-
-.volver {
-  margin-top: 20px;
-}
-
-/* ====== MARCADOR ====== */
-/* CONTENEDOR DEL MARCADOR */
-.scoreboard {
-  border-collapse: separate;
-  border-spacing: 0;
-  border-radius: 14px;
-  overflow: hidden;
-  background: #ffffff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  margin-top: 12px;
-}
-
-/* CABECERA */
-.scoreboard thead {
-  background: linear-gradient(135deg, #1e3a8a, #2563eb);
-  color: #fff;
-}
-
-/* CONTENEDOR DEL MARCADOR */
-/* ===== MARCADOR GRANDE ===== */
-.scoreboard {
-  border-collapse: separate;
-  border-spacing: 0;
-  border-radius: 20px;
-  overflow: hidden;
-  background: #ffffff;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
-  margin: 24px auto;
-  width: 100%;
-  max-width: 980px;        /* 🔥 MUCHO MÁS GRANDE */
-}
-
-/* CABECERA */
-.scoreboard thead {
-  background: linear-gradient(135deg, #1e3a8a, #2563eb);
-  color: #fff;
-}
-
-.scoreboard th {
-  padding: 14px 10px;      /* 🔥 MÁS ALTO */
-  font-size: 15px;        /* 🔥 MÁS GRANDE */
-  text-align: center;
-  font-weight: 600;
-}
-
-/* CELDAS */
-.scoreboard td {
-  padding: 12px 10px;      /* 🔥 MÁS ALTO */
-  font-size: 14px;
-  text-align: center;
-}
-
-/* INPUTS DE CARRERAS */
-.scoreboard input {
-  width: 56px;             /* 🔥 MÁS ANCHO */
-  height: 40px;            /* 🔥 MÁS ALTO */
-  font-size: 15px;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 12px;
-  border: 2px solid #cbd5e1;
-}
-
-/* TOTALES */
-#totalMe,
-#totalRival {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-/* HOVER */
-.scoreboard tbody tr:hover {
-  background: #eef2ff;
-}
-
-.scoreboard tbody tr:hover {
-  background: #f1f5ff;
-}
-
-/* ====== TABLA JUGADORES ====== */
-
-.tabla-jugadores th,
-.tabla-jugadores td {
-  border: 1px solid #ccc;
-  padding: 20px;
-  text-align: center;
-}
-
-.tabla-jugadores th {
-  background: #2563eb;
-  color: white;
-}
-
-.tabla-jugadores input {
-  width: 60px;
-  text-align: center;
-}
-
-/* ====== TABLA ANOTACIÓN (LA IMPORTANTE) ====== */
-.tabla-anotacion {
+/* ===== TABLAS GENERALES ===== */
+table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
-  table-layout: fixed;
+  min-width: 600px;
 }
 
-.tabla-anotacion th {
-  background: #7a0f5c;
-  color: white;
-  padding: 10px;
-  text-align: center;
-}
-
-.tabla-anotacion td {
-  border: 1px solid #ccc;
+th, td {
+  border: 1px solid #1e40af;
   padding: 8px;
   text-align: center;
 }
 
-.tabla-anotacion td:nth-child(2) {
-  text-align: left;
-  font-weight: bold;
-}
-
-.tabla-anotacion input {
-  width: 100%;
-  text-align: center;
-}
-
-.tabla-anotacion button {
-  padding: 4px 6px;
-  font-size: 12px;
-  margin: 2px;
-  cursor: pointer;
-}
-.tabla-anotacion {
-  table-layout: fixed;
-}
-
-.tabla-anotacion th,
-.tabla-anotacion td {
-  text-align: center;
-  vertical-align: middle;
-}
-
-.tabla-anotacion td:nth-child(2) {
-  text-align: left;
-}
-
-.tabla-anotacion input {
-  width: 100%;
-  box-sizing: border-box;
-}
-/* =========================
-   TABLA ANOTACIÓN JUGADORES
-========================= */
-
-.tabla-anotacion {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 12px;              /* 🔽 texto pequeño */
-  background: #fff;
-}
-
-.tabla-anotacion th,
-.tabla-anotacion td {
-  padding: 4px 6px;             /* 🔽 menos altura */
-  text-align: center;
-  border: 1px solid #ddd;
-}
-
-.tabla-anotacion th {
-  background: #1f2933;
-  color: #fff;
-  font-weight: 600;
-}
-
-/* Nombres alineados */
-.tabla-anotacion td:nth-child(2) {
-  text-align: left;
-  white-space: nowrap;
-}
-
-/* Botones pequeños */
-.tabla-anotacion button {
-  font-size: 10px;
-  padding: 2px 5px;
-  margin: 1px;
-  border-radius: 4px;
-  border: none;
-  background: #2563eb;
-  color: white;
-  cursor: pointer;
-}
-
-.tabla-anotacion button:hover {
-  background: #1e40af;
-}
-
-/* Contenedor con altura fija */
-.tabla-anotacion tbody {
-  display: block;
-  max-height: 320px;            /* ✅ Caben 11 jugadores */
-  overflow-y: auto;
-}
-
-.tabla-anotacion thead,
-.tabla-anotacion tbody tr {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
-}
-/* Columna NOMBRE */
-.tabla-anotacion td:nth-child(2) {
-  max-width: 120px;       /* 🔒 ancho fijo */
-  white-space: nowrap;    /* no baja línea */
-  overflow: hidden;       /* corta exceso */
-  text-overflow: ellipsis;/* ... */
-  text-align: left;
-}
-/* CONTENEDOR GENERAL DE LA TABLA */
-.tabla-anotacion {
-  border-collapse: separate;
-  border-spacing: 0;
-  border-radius: 14px;          /* 🔵 CURVAS */
-  overflow: hidden;             /* 🔒 corta esquinas */
-  background: #ffffff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-.tabla-anotacion thead th:first-child {
-  border-top-left-radius: 14px;
-}
-
-.tabla-anotacion thead th:last-child {
-  border-top-right-radius: 14px;
-}
-tabla-anotacion tbody tr:last-child td:first-child {
-  border-bottom-left-radius: 14px;
-}
-
-.tabla-anotacion tbody tr:last-child td:last-child {
-  border-bottom-right-radius: 14px;
-}
-.tabla-anotacion thead {
-  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+th {
+  background: #1e3a8a;
   color: white;
 }
 
-.tabla-anotacion tbody tr:nth-child(even) {
-  background: #f8fafc;
+tr:nth-child(even) {
+  background: #f1f5f9;
 }
 
-.tabla-anotacion tbody tr:hover {
-  background: #e0ecff;
-}
-/* ===== TABLA ANOTACIÓN (MISMO TAMAÑO QUE MARCADOR) ===== */
-.tabla-anotacion {
-  border-collapse: separate;
-  border-spacing: 0;
-  border-radius: 20px;
-  overflow: hidden;
-  background: #ffffff;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
-  margin: 24px auto;
-  width: 100%;
-  max-width: 980px;       /* 🔥 MISMO TAMAÑO */
+tr:hover {
+  background: #dbeafe;
 }
 
-/* CABECERA */
-.tabla-anotacion thead {
-  background: linear-gradient(135deg, #0f172a, #1e3a8a);
-  color: #fff;
-}
-
-.tabla-anotacion th {
-  padding: 12px 8px;
-  font-size: 14px;
-  text-align: center;
-  font-weight: 600;
-}
-
-/* CELDAS */
-.tabla-anotacion td {
-  padding: 10px 8px;
-  font-size: 13px;
-  text-align: center;
-}
-
-/* INPUTS / BOTONES */
-.tabla-anotacion button {
-  padding: 4px 8px;
-  font-size: 12px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  background: #2563eb;
-  color: #fff;
-  margin: 2px;
-}
-
-.tabla-anotacion button:hover {
-  background: #1d4ed8;
-}
-
-/* NOMBRE NO SE SALE */
-.tabla-anotacion td:nth-child(2) {
-  max-width: 160px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* HOVER */
-.tabla-anotacion tbody tr:hover {
-  background: #eef2ff;
-}
-/* ===== TABLA DE ANOTACIÓN (GRANDE) ===== */
-.tabla-anotacion {
-  width: 100%;
-  max-width: 1150px;     /* ⬅ MÁS GRANDE */
-  margin: 30px auto;
-  border-collapse: separate;
-  border-spacing: 0;
-  background: #ffffff;
-  border-radius: 22px;
-  box-shadow: 0 14px 32px rgba(0,0,0,0.25);
-  overflow: hidden;
-}
-
-/* CABECERA */
-.tabla-anotacion thead {
-  background: linear-gradient(135deg, #0f172a, #1e40af);
-  color: #ffffff;
-}
-
-.tabla-anotacion th {
-  padding: 14px 10px;
-  font-size: 15px;
-  font-weight: 600;
-  text-align: center;
-}
-
-/* CUERPO */
-.tabla-anotacion td {
-  padding: 12px 10px;
-  font-size: 14px;
-  text-align: center;
-}
-
-/* NOMBRE DEL JUGADOR (NO SE SALE) */
-.tabla-anotacion td:nth-child(2) {
-  max-width: 220px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* HOVER */
-.tabla-anotacion tbody tr:hover {
-  background: #e0e7ff;
-}
+/* ===== SCROLL EN CELULAR ===== */
 .tabla-wrapper {
   width: 100%;
   overflow-x: auto;
 }
+
+/* ===== MARCADOR ===== */
+.scoreboard {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+  margin: 20px auto;
+}
+
+.scoreboard input {
+  width: 50px;
+  height: 35px;
+  text-align: center;
+}
+
+/* ===== TABLA ANOTACION ===== */
 .tabla-anotacion {
   width: 100%;
-  min-width: 900px; /* 🔥 CLAVE para muchas columnas */
-  border-collapse: collapse;
+  min-width: 900px;
   table-layout: fixed;
 }
 
-.tabla-anotacion th,
-.tabla-anotacion td {
-  border: 1px solid #ccc;
-  padding: 6px;
-  text-align: center;
-  font-size: 13px;
+.tabla-anotacion td:nth-child(2) {
+  text-align: left;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.tabla-anotacion th,
-.tabla-anotacion td {
-  border: 1px solid #ccc;
-  padding: 6px;
-  text-align: center;
-  font-size: 13px;
-  white-space: nowrap;
-}
 .tabla-anotacion button {
-  padding: 4px 6px;
   font-size: 11px;
-  margin: 2px;
-  border-radius: 4px;
+  padding: 4px 6px;
   cursor: pointer;
 }
-.marcador-wrapper {
-  width: 100%;
-  overflow-x: auto;
-}
 
-.tabla-estadisticas th,
-.tabla-estadisticas td {
-  border: 1px solid #ccc;
-  padding: 8px;
-  text-align: center;
-}
-
-.tabla-estadisticas th {
-  background-color: #2563eb;
-  color: white;
-}
-/* ===== TABLA ESTADÍSTICAS ===== */
-.tabla-estadisticas {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-  background: #1a0e0e;
-}
-
-.tabla-estadisticas th,
-.tabla-estadisticas td {
-  border: 2px solid #69dd49;
-  padding: 8px;
-  text-align: center;
-  color: #000;
-  font-weight: 500;
-}
-
-.tabla-estadisticas th {
-  background: #0033cc;
-  color: #ffffff;
-}
-
-.tabla-estadisticas tr:nth-child(even) {
-  background: #f2f6ff;
-}
-
-.tabla-estadisticas tr:hover {
-  background: #dbe6ff;
-}
-  .tabla-estadisticas {
-  border: 5px solid red !important;
-}
-
-  .stats-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-.stats-table th,
-.stats-table td {
-  border: 1px solid #000;
-  padding: 8px;
-  text-align: center;
-}
-
-.stats-table th {
-  background-color: #0d2cbf;
-  color: white;
-}
-/* ===== TABLA ESTADÍSTICAS ===== */
+/* ===== ESTADISTICAS ===== */
 .stats-table {
   width: 100%;
-  border-collapse: collapse;
   margin-top: 20px;
-  background: #ffffff;
-}
-
-.stats-table th,
-.stats-table td {
-  border: 2px solid #1e40af;
-  padding: 8px;
-  text-align: center;
-  color: #000;
+  background: #fff;
 }
 
 .stats-table th {
@@ -925,99 +498,17 @@ tabla-anotacion tbody tr:last-child td:first-child {
   color: white;
 }
 
-.stats-table tr:nth-child(even) {
-  background: #f2f6ff;
-}
-
-.stats-table tr:hover {
-  background: #dbe6ff;
-}
-
-pitcher-box {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-.pitcher-box th,
-pitcher-box td {
-  border: 1px solid #000;
-  padding: 8px;
-  text-align: center;
-}
-
-.pitcher-box th {
-  background-color: #0d2cbf;
-  color: white;
-}
+/* ===== PITCHERS ===== */
 .tablaPitchers {
   width: 100%;
-  border-collapse: collapse;
   margin-top: 20px;
-  background: #ffffff;
-}
-
-.tablaPitchers th,
-.tablaPitchers td {
-  border: 2px solid #1e40af;
-  padding: 8px;
-  text-align: center;
-  color: #000;
+  background: #fff;
 }
 
 .tablaPitchers th {
   background: #2563eb;
   color: white;
-}
 
-.tablaPitchers tr:nth-child(even) {
-  background: #f2f6ff;
-}
-.tabla-jugadores,
-.stats-table,
-.scoreboard {
-  min-width: 800px;
-}
-.login-box {
-  width: 90%;
-  max-width: 360px;
-}
-.tablaPitchers tr:hover {
-  background: #dbe6ff;
-  @media (max-width: 768px) {
-
-  body {
-    padding: 10px;
-  }
-
-  h1, h2 {
-    font-size: 18px;
-    text-align: center;
-  }
-
-  .menu-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .menu-grid button {
-    font-size: 14px;
-    padding: 12px;
-  }
-
-  .nuevo-juego input,
-  .nuevo-jugador input,
-  .nuevo-jugador select {
-    width: 100%;
-    margin-bottom: 8px;
-  }
-
-  .nuevo-juego button,
-  .nuevo-jugador button {
-    width: 100%;
-  }
-
-}
-  
 }</style>
 
     <script>console.log("Softbol Control cargado");
